@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probiont</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/myLib.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <nav class="navbar fixed-top navbar-light bg-dark text-white px-2">
+                <div>
+                    <i class="fa-solid fa-bars" id="bars"></i>
+                    <a class="navbar-brand text-white" href="#">Probiont</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="sideBarContainer mt-50">
+
+            <!--this is right side menu-->
+            <div class="sideBar ml--100">
+                <div class="userPictureAndUserName">
+                    <img src="images/images.jpg" alt="">
+                    <p class="userName">Ramin Mammadzada</p>
+                </div>
+
+                <div class="sideBarLinks">
+                    <ul>
+                        <li class="active" id="homePageButton"><i class="fa-solid fa-house"></i> Home</li>
+                        <li id="notificationsButton"><i class="fa-sharp fa-solid fa-bell"></i> Notifications</li>
+                        <li id="settingsButton"><i class="fa-solid fa-gear"></i> Settings</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!--this is left side menu - content -->
+            <div class="content">
+                <div class="homePage">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-12 col-lg-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <img src="images/ph-balance.png" alt="ph balance" id="phIcon">
+                                        <strong>PH Balance</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div id="chartForPh"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-4">
+                                <div class="card">
+
+                                    <div class="card-header">
+                                        <img src="images/wet.png" alt="ph balance" id="wetIcon">
+                                        <strong>Wetness</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div id="chartForThempreature"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-4">
+                                <div class="card">
+
+                                    <div class="card-header">
+                                        <img src="images/thermometer.png" alt="ph balance" id="thermometerIcon">
+                                        <strong>Tempreature</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div id="chartForWetness"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notifications">
+                    <div class="notification">
+                        <strong>12.12.2022</strong>
+                        <div class="alert alert-primary" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                    </div>
+
+                    <div class="notification">
+                        <strong>12.12.2022</strong>
+                        <div class="alert alert-danger" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                    </div>
+
+                    <div class="notification">
+                        <strong>12.12.2022</strong>
+                        <div class="alert alert-primary" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                    </div>
+
+                    <div class="notification">
+                        <strong>12.12.2022</strong>
+                        <div class="alert alert-primary" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Change name and surname</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="nameInput">Name</label>
+                                                <input type="text" id="nameInput" class="form-control"
+                                                    placeholder="Name">
+                                            </div>
+
+                                            <div class="form-group mt-3">
+                                                <label for="surnameInput">Surname</label>
+                                                <input type="text" id="surnameInput" class="form-control"
+                                                    placeholder="Surname">
+                                            </div>
+                                            <input type="submit" value="Change"
+                                                class="btn btn-success mt-3 form-control">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Change phone number and email</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="phoneInput">Phone number</label>
+                                                <input type="text" id="phoneInput" class="form-control"
+                                                    placeholder="Name">
+                                            </div>
+
+                                            <div class="form-group mt-3">
+                                                <label for="emailInput">Email</label>
+                                                <input type="email" id="emailInput" class="form-control"
+                                                    placeholder="Surname">
+                                            </div>
+                                            <input type="submit" value="Change"
+                                                class="btn btn-success mt-3 form-control">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Change password</strong>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="newPassInput">New passowrd</label>
+                                                <input type="password" id="newPassInput" class="form-control"
+                                                    placeholder="New password">
+                                            </div>
+
+                                            <div class="form-group mt-3">
+                                                <label for="confirmPassInput">Confirm new passowrd</label>
+                                                <input type="password" id="confirmPassInput" class="form-control"
+                                                    placeholder="Confirm new password">
+                                            </div>
+                                            <input type="submit" value="Change"
+                                                class="btn btn-success mt-3 form-control">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/App.js"></script>
+
+</body>
+
+</html>

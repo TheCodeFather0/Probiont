@@ -1,0 +1,99 @@
+.fa-bars {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sideBarContainer {
+    display: flex !important;
+    width: 100% !important;
+    position: relative;
+}
+
+.sideBarContainer .sideBar {
+    background-color: #ddd;
+    padding: 30px 15px;
+    transition: All .8s ease-out;
+    width: 25% !important;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+}
+
+.sideBarContainer .sideBar .userPictureAndUserName img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sideBarContainer .sideBar .userPictureAndUserName {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+.sideBarContainer .sideBar .userPictureAndUserName .userName {
+    margin-left: 10px;
+}
+
+.sideBarContainer .sideBarLinks {
+    margin-top: 40px;
+}
+
+.sideBarContainer .sideBarLinks ul {
+    padding: 0 !important;
+}
+
+.sideBarContainer .sideBarLinks ul li {
+    list-style-type: none;
+    margin-bottom: 30px;
+    margin: 20px 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.sideBarContainer .content {
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.active {
+    color: green;
+}
+
+.notifications,
+.settings {
+    display: none;
+}
+
+
+.sideBarContainer .content .homePage #phIcon,
+.sideBarContainer .content .homePage #wetIcon,
+.sideBarContainer .content .homePage #thermometerIcon {
+    width: 50px;
+}
+
+.sideBarContainer .content .homePage strong {
+    margin-left: 10px;
+}
+
+
+@media only screen and (max-width:992px) {
+    .homePage .col-12:not(:last-child) {
+        margin-bottom: 20px;
+    }
+   .sideBarContainer .sideBar {
+        width: 40% !important;
+    }
+    
+}
+@media only screen and (max-width:768px) {
+    .sideBarContainer .sideBar {
+        width: 100% !important;
+    }
+    .settings .col-12:last-child {
+        margin-top: 20px;
+    }
+}
+
