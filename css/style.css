@@ -180,6 +180,10 @@ body{
     z-index: 1;
 }
 
+.userProfil {
+    border-radius: 10px;
+}
+
 .w0 {
     opacity: 0;
     z-index: -1;
