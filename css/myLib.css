@@ -13624,25 +13624,4 @@ fieldset:disabled .btn {
 
 /*# sourceMappingURL=bootstrap.min.css.map */
 
-.mt-50 {
-    margin-top: 46px;
-}
-
-.ml--100 {
-    margin-left: -25%;
-}
-
-@media only screen and (max-width:1024px) {
-    .ml--100 {
-        margin-left: -40%;
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .ml--100 {
-        margin-left: -100%;
-    }
-}
-
-
 

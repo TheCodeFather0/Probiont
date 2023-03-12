@@ -1,100 +1,41 @@
-"use strict";
 
-bars.addEventListener('click',() => {
-    document.querySelector('.sideBar').classList.toggle('ml--100')
+let isShow = false;
+homeIcon.addEventListener('click', (e) => {
+
+    e.target.classList.add('activeUser');
+    userIcon.classList.remove('activeUser');
+
+    userProfil.classList.add('w0');
+
+    setTimeout(() => {
+      userProfil.classList.add('dn')
+    }, 200);
+    setTimeout(() => {
+    }, 100);
+
+
+    setTimeout(() => {
+      main.classList.remove('dn')
+    }, 200);
+    setTimeout(() => {
+      main.classList.remove('w0')
+    }, 300);
+});
+
+userIcon.addEventListener('click',(e) => {
+  e.target.classList.add('activeUser');
+  homeIcon.classList.remove('activeUser');
+
+  main.classList.add('w0')
+  setTimeout(() => {
+    main.classList.add('dn')
+  }, 100);
+
+  setTimeout(() => {
+    userProfil.classList.remove('dn')
+  }, 200);
+
+  setTimeout(() => {
+    userProfil.classList.remove('w0');
+  }, 300);
 })
-
-
-//sideBar
-console.log(document.querySelector('.sideBar').clientWidth)
-homePageButton.addEventListener('click',(e) => {
-    notificationsButton.classList.remove('active');
-    settingsButton.classList.remove('active');
-    e.target.classList.add('active');
-
-    document.querySelector('.homePage').style.display = 'block';
-    document.querySelector('.notifications').style.display = 'none';
-    document.querySelector('.settings').style.display = 'none';
-
-    document.querySelector('.sideBar').classList.toggle('ml--100')
-});
-
-notificationsButton.addEventListener('click',(e) => {
-    homePageButton.classList.remove('active');
-    settingsButton.classList.remove('active');
-    e.target.classList.add('active');
-
-    document.querySelector('.homePage').style.display = 'none';
-    document.querySelector('.settings').style.display = 'none';
-    document.querySelector('.notifications').style.display = 'block';
-
-    document.querySelector('.sideBar').classList.toggle('ml--100')
-});
-
-settingsButton.addEventListener('click',(e) => {
-    homePageButton.classList.remove('active');
-    notificationsButton.classList.remove('active');
-    e.target.classList.add('active');
-
-    document.querySelector('.homePage').style.display = 'none';
-    document.querySelector('.notifications').style.display = 'none';
-    document.querySelector('.settings').style.display = 'block';
-
-    document.querySelector('.sideBar').classList.toggle('ml--100')
-});
-
-
-
-//PH chart
-var phChartOptions = {
-    chart: {
-      type: 'bar'
-    },
-    series: [{
-      name: 'PH Scale',
-      data: [30,40,45,50,49,60,80]
-    }],
-    xaxis: {
-      categories: ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun']
-    }
-  }
-  
-  var chartForPh = new ApexCharts(document.querySelector("#chartForPh"), phChartOptions);
-  chartForPh.render();
-
-
-
-  
-  var thempreatureChartOptions = {
-    chart: {
-        type: 'bar'
-      },
-      series: [{
-        name: 'Thempreaute',
-        data: [30,40,45,50,49,60,80]
-      }],
-      xaxis: {
-        categories: ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun']
-      }
-    }
-    
-  var chartForThempreature = new ApexCharts(document.querySelector("#chartForThempreature"), thempreatureChartOptions);
-  chartForThempreature.render();
-
-
-
-  var options = {
-    chart: {
-        type: 'bar'
-      },
-      series: [{
-        name: 'Wetness',
-        data: [30,40,45,50,49,60,80]
-      }],
-      xaxis: {
-        categories: ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun']
-      }
-    }
-
-  var chartForWetness = new ApexCharts(document.querySelector("#chartForWetness"), options);
-  chartForWetness.render();
