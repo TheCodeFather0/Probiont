@@ -1,7 +1,6 @@
 
 let isShow = false;
 homeIcon.addEventListener('click', (e) => {
-
     e.target.classList.add('activeUser');
     userIcon.classList.remove('activeUser');
 
@@ -10,8 +9,6 @@ homeIcon.addEventListener('click', (e) => {
     setTimeout(() => {
       userProfil.classList.add('dn')
     }, 200);
-    setTimeout(() => {
-    }, 100);
 
 
     setTimeout(() => {
