@@ -318,7 +318,7 @@ body{
     top: 6%;
     left: 35%;
     font-size: 17px;
-}
+}   
 
 .notificationsIcon {
     border-radius: 50%;
@@ -364,8 +364,10 @@ body{
     width: calc(100% - 20px);
 }
 
-
-@media screen and (max-width:960px) {
+@media screen and (max-width:992px) {
+    h1 {
+        font-size: 20px;
+    }
    #navbarScroll ul {
     flex-direction: row !important;
     justify-content: flex-end !important;
@@ -374,4 +376,12 @@ body{
    .navbar-brand {
     width: 150px !important;
    }
+
+   .fa-leaf {
+    left: 68%;
+    }
+    
+    .card-body {
+        height: 200px;
+    }
 }
